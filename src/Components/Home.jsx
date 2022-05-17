@@ -21,22 +21,19 @@ function Home() {
         <div className="welcome-text centered">
           <h2>About Us</h2>
           <p>
-            Rainy Data is a fun, free data storage solution. It's a web-based
-            application that allows you to upload files to store and use at a
-            later time. <br /> Access your files, homework, resume, audio,
-            video, etc, anywhere you have access to the internet.
+            Rainy Data is a web-based developer tool that allows developers to download fake JavaScript databases for their projects <br /> These databases can be called upon in a function getDatabase()
             <br />
             <br />
             <a href="/" className="primary-text">
               Join the community
             </a>{" "}
-            and save those files for a rainy day. <br />
+            and save those files for a rainy day <br />
             <br />
-            Got a question? Check our or{" "}
+            Got a question? Check out our{" "}
             <a href="/" className="primary-text">
               FAQ's
             </a>
-            .
+            
           </p>
         </div>
         <img
