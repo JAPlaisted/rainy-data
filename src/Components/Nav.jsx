@@ -5,7 +5,7 @@ function Nav() {
         <nav>
             <p className='primary-text koulen'>Rainy Data</p>
             <ul>
-                <li className='btn'>Upload</li>
+                <li className='btn'>Files</li>
                 <li className='primary-text'>Sign In</li>
             </ul>
         </nav>
