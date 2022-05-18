@@ -49,7 +49,7 @@ body {
   --color-primary: #ffc54d;
   --color-secondary: #355152;
   --color-accent: #a0bbac;
-  --color-body: rgb(60, 60, 60);
+  --color-body: rgb(255, 255, 255);
   --color-background-light: whitesmoke;
   --border-radius: 30px;
 }

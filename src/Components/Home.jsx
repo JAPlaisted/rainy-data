@@ -21,7 +21,7 @@ function Home() {
         <div className="welcome-text centered">
           <h2>About Us</h2>
           <p>
-            Rainy Data is a web-based developer tool that allows developers to download fake JavaScript databases for their projects <br /> These databases can be called upon in a function getDatabase()
+            Rainy Data is a web-based developer tool that allows developers to download mock JavaScript databases for their projects <br /> These databases can be called upon in a function getDatabase()
             <br />
             <br />
             <a href="/" className="primary-text">
