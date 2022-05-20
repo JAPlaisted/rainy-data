@@ -33,17 +33,32 @@ html {
 
 body {
   font-family: 'inter', 'Roboto', sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   position: relative;
   background: rgb(255,245,223);
   background: linear-gradient(190deg, rgba(255,245,223,1) 0%, rgba(245,245,245,1) 62%);
 }
 
+@media screen and (min-width: 728px) {
+  body {
+    font-size: 2.4rem;
+  }
+}
+
 .guy {
-  z-index: 1; 
+  z-index: 0; 
   background-size: cover;
-  margin-bottom: 16rem;
+  margin-bottom: 26rem;
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (min-width: 728px) {
+  .guy {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 /* Color Palette */
@@ -96,7 +111,14 @@ nav, nav > ul {
 nav {
   margin-inline: 8rem;
   justify-content: space-between;
-  font-size: 1.75rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 728px) {
+  nav {
+    font-size: 1.75rem;
+  }
 }
 
 li {
@@ -142,11 +164,17 @@ li {
 }
 
 .stem {
-  width: 3px;
+  width: 1px;
   height: 60%;
   margin-left: 7px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
   animation: stem 0.5s linear infinite;
+}
+
+@media screen and (min-width: 728px) {
+  .stem {
+    width: 3px;
+  }
 }
 
 @keyframes stem {
