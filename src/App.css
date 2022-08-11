@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 html,
@@ -49,7 +48,8 @@ body {
 .guy {
   z-index: 0; 
   background-size: cover;
-  margin-bottom: 26rem;
+  position: fixed;
+  bottom: 0;
   width: 100px;
   height: 100px;
 }
@@ -74,6 +74,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: white;
 }
 
 .primary-text {
@@ -81,7 +82,7 @@ a {
 }
 
 .welcome-text{
-  margin-top: 6rem;
+  margin-top: -10rem;
 }
 
 .koulen {
@@ -126,3 +127,20 @@ li {
   margin-left: 3rem;
 }
 
+.file--container {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.file {
+  background-color: var(--color-primary);
+  color: white;
+  height: 100px;
+  width: 75px;
+  border: none;
+  cursor: pointer;
+  margin-inline: 2rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border-radius: 15px;
+  margin-top: -10rem;
+}

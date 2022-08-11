@@ -3,8 +3,15 @@ import Guy from "../Assets/umbrellaMan.png";
 import Landscape from "../Assets/bkgrnd.png";
 import axios from 'axios';
 import fileDownload from 'js-file-download';
+import {useState} from 'react';
 
 function Home() {
+
+  const [isActive, setIsActive] = useState(false);
+
+  const showFiles = () => {
+    setIsActive(current => !current);
+  };
 
   const download=(e)=>{
     e.preventDefault()
@@ -21,18 +28,30 @@ function Home() {
     const sectionStyle = {
         backgroundImage: `url(${Landscape})`,
         width: "100vw",
-        height: "95vh",
+        height: "100vh",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
         zIndex: "5",
       };
 
+
+
     return ( 
         <div className="container" style={sectionStyle}>
+           <nav>
+            <p className='primary-text koulen'><a href="/">Rainy Data</a></p>
+            <ul>
+                <li className='btn' onClick={showFiles}>Files</li>
+            </ul>
+        </nav>
         <div className="welcome-text centered">
-          <h2>About Us</h2>
-          <p>
+          <h2 style={{
+          display: isActive ? 'none' : 'block',
+        }}>About Us</h2>
+          <p style={{
+          display: isActive ? 'none' : 'block',
+        }}>
             Rainy Data is a web-based developer tool that allows developers to download mock JavaScript databases for their projects <br /> These databases can be called upon in a function getDatabase()
             <br />
             <br />
@@ -44,8 +63,11 @@ function Home() {
             
           </p>
         </div>
-        <div>
-          <button className='btn' onClick={(e)=>download(e)}>Download</button>
+        <div className='file--container' style={{
+          display: isActive ? 'flex' : 'none',
+        }}>
+          <button className='file' onClick={(e)=>download(e)}>Film & Book Genres</button>
+          <button className='file' onClick={(e)=>download(e)}>Reading List</button>
         </div>
 
         <img
