@@ -50,11 +50,7 @@ function Home() {
             Rainy Data is a web-based developer tool that allows developers to download mock JavaScript databases for their projects <br /> These databases can be called upon in a function getDatabase()
             <br />
             <br />
-            <a href="/" className="primary-text">
-              Join the community
-            </a>{" "}
-            and save those files for a rainy day <br />
-            <br />
+            
             Got a question? Check out our{" "}
             <a href="/" className="primary-text">
               FAQ's
