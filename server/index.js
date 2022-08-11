@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.download("./fakeReadingService.js");
+  res.download("./fakeGenreService.js");
 });
 
 app.listen(4000);
