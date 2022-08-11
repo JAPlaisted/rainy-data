@@ -2,6 +2,8 @@ import React from 'react';
 import Guy from "../Assets/umbrellaMan.png";
 import Landscape from "../Assets/bkgrnd.png";
 import $ from "jquery";
+import axios from 'axios';
+import fileDownload from 'js-file-download';
 
 function Home() {
 
@@ -42,6 +44,17 @@ function Home() {
         zIndex: "-1",
       };
 
+      const download=(e)=>{
+        e.preventDefault()
+        axios({
+          url:"http://localhost:4000",
+          method:"GET",
+          responseType:"blob"
+        }).then((res)=>{
+          fileDownload(res.data, "db.js")
+        })
+      }
+
     return ( 
         <div className="container" style={sectionStyle}>
         <div className="welcome-text centered">
@@ -57,6 +70,9 @@ function Home() {
             </a>
             
           </p>
+        </div>
+        <div>
+          <button onClick={(e)=>download(e)}>Download</button>
         </div>
 
         <img
