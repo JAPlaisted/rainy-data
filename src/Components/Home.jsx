@@ -1,38 +1,22 @@
 import React from 'react';
 import Guy from "../Assets/umbrellaMan.png";
 import Landscape from "../Assets/bkgrnd.png";
-import $ from "jquery";
 import axios from 'axios';
 import fileDownload from 'js-file-download';
 
 function Home() {
 
-    const makeItRain = function() {
-
-        $('.rain').empty();
-      
-        let increment = 0;
-        let drops = "";
-        let backDrops = "";
-      
-        while (increment < 100) {
-          //couple random numbers to use for various randomizations
-          //random number between 98 and 1
-          const randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
-
-          const randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
-
-          increment += randoFiver;
-          //add in a new raindrop with various randomizations to certain CSS properties
-          drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
-          backDrops += '<div class="drop" style="right: ' + increment  + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
-        }
-      
-        $('.rain.front-row').append(drops);
-        $('.rain.back-row').append(backDrops);
-      }
-      
-      makeItRain();
+  const download=(e)=>{
+    e.preventDefault()
+    axios({
+      url:"http://localhost:4000",
+      method:"GET",
+      responseType:"blob"
+    }).then((res)=>{
+      console.log(res);
+      fileDownload(res.data, "db.js");
+    })
+  }
 
     const sectionStyle = {
         backgroundImage: `url(${Landscape})`,
@@ -41,19 +25,8 @@ function Home() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        zIndex: "-1",
+        zIndex: "5",
       };
-
-      const download=(e)=>{
-        e.preventDefault()
-        axios({
-          url:"http://localhost:4000",
-          method:"GET",
-          responseType:"blob"
-        }).then((res)=>{
-          fileDownload(res.data, "db.js")
-        })
-      }
 
     return ( 
         <div className="container" style={sectionStyle}>
@@ -72,7 +45,7 @@ function Home() {
           </p>
         </div>
         <div>
-          <button onClick={(e)=>download(e)}>Download</button>
+          <button className='btn' onClick={(e)=>download(e)}>Download</button>
         </div>
 
         <img
