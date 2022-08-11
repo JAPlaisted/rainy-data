@@ -7,6 +7,8 @@ import {useState} from 'react';
 
 function Home() {
 
+  /*TODO: Fix dog.png bug*/
+
   const [isActive, setIsActive] = useState(false);
 
   const showFiles = () => {
@@ -21,7 +23,19 @@ function Home() {
       responseType:"blob"
     }).then((res)=>{
       console.log(res);
-      fileDownload(res.data, "db.js");
+      fileDownload(res.data, "genreService.js");
+    })
+  }
+
+  const download2=(e)=>{
+    e.preventDefault()
+    axios({
+      url:"http://localhost:4000",
+      method:"GET",
+      responseType:"blob"
+    }).then((res2)=>{
+      console.log(res2);
+      fileDownload(res2.data, "readingService.js");
     })
   }
 
@@ -34,8 +48,6 @@ function Home() {
         backgroundPosition: "center",
         zIndex: "5",
       };
-
-
 
     return ( 
         <div className="container" style={sectionStyle}>
@@ -67,7 +79,7 @@ function Home() {
           display: isActive ? 'flex' : 'none',
         }}>
           <button className='file' onClick={(e)=>download(e)}>Film & Book Genres</button>
-          <button className='file' onClick={(e)=>download(e)}>Reading List</button>
+          <button className='file' onClick={(e)=>download2(e)}>Reading List</button>
         </div>
 
         <img
