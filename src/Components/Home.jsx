@@ -5,6 +5,7 @@ import axios from 'axios';
 import fileDownload from 'js-file-download';
 import {useState} from 'react';
 
+
 function Home() {
 
   /*TODO: Fix dog.png bug*/
@@ -69,7 +70,7 @@ function Home() {
             <br />
             
             Got a question? Check out our{" "}
-            <a href="/" className="primary-text">
+            <a href="/faq" className="primary-text">
               FAQ's
             </a>
             
