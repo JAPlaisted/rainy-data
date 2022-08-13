@@ -19,7 +19,7 @@ function Home() {
   const download=(e)=>{
     e.preventDefault()
     axios({
-      url:"http://localhost:4000",
+      url:"http://localhost:3000",
       method:"GET",
       responseType:"blob"
     }).then((res)=>{
@@ -31,7 +31,7 @@ function Home() {
   const download2=(e)=>{
     e.preventDefault()
     axios({
-      url:"http://localhost:4000",
+      url:"http://localhost:3000",
       method:"GET",
       responseType:"blob"
     }).then((res2)=>{
