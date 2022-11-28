@@ -130,7 +130,7 @@ li {
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  padding: 12rem;
+  padding: 12rem 15rem 12rem 15rem;
 }
 
 .file {
