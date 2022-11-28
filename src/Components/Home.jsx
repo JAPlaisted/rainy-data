@@ -88,6 +88,8 @@ function Home() {
           src={Guy}
           alt="guy with umbrella"
         />
+        <div></div>
+        <div></div>
       </div>
      );
 }
