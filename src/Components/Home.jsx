@@ -88,8 +88,6 @@ function Home() {
           src={Guy}
           alt="guy with umbrella"
         />
-        <div className="rain front-row"></div>
-        <div className="rain back-row"></div>
       </div>
      );
 }
