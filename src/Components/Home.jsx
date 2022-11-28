@@ -16,6 +16,8 @@ function Home() {
     setIsActive(current => !current);
   };
 
+  let fileLabel = !isActive ? 'Files' : "Hide";
+
   const download=(e)=>{
     e.preventDefault()
     axios({
@@ -55,7 +57,7 @@ function Home() {
            <nav>
             <p className='primary-text koulen'><a href="/">Rainy Data</a></p>
             <ul>
-                <li className='btn' onClick={showFiles}>Files</li>
+                <li className='btn' onClick={showFiles}>{fileLabel}</li>
             </ul>
         </nav>
         <div className="welcome-text centered">
