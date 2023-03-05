@@ -14,7 +14,7 @@
 
 html,
 body {
-  background-color: #e4daa9;
+  background-color: #de7241;
 }
 
 /* Typography */
@@ -81,6 +81,9 @@ a {
 
 .welcome-text{
   margin-top: -10rem;
+  background-color: #4d4b2d67;
+  border-radius: 5px;
+  padding-inline: 6rem;
 }
 
 .koulen {
@@ -128,8 +131,8 @@ li {
 .file--container {
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  background-color: #4d4b2d67;
+  border-radius: 5px;
   padding: 12rem 15rem 12rem 15rem;
 }
 
@@ -142,13 +145,13 @@ li {
   cursor: pointer;
   margin-inline: 2rem;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 /* FAQ */
 
 .faq {
-  background-color: #e4daa9;
+  background-color: #d37d56;
   height: 100vh;
   overflow-y: visible;
 }
