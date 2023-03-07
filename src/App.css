@@ -32,7 +32,11 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom, #202020, #111119);
+  background: rgb(0,0,0);
+  background: -moz-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(14,14,13,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(14,14,13,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(14,14,13,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0e0e0d",GradientType=1);
 }
 
 @media screen and (min-width: 728px) {
@@ -131,8 +135,6 @@ li {
   margin-top: 5%;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #4d4b2d67;
-  border-radius: 5px;
   padding: 12rem 15rem 12rem 15rem;
 }
 
@@ -140,7 +142,7 @@ li {
   background-color: var(--color-primary);
   color: white;
   height: 100px;
-  width: 75px;
+  width: 100px;
   border: none;
   cursor: pointer;
   margin-inline: 2rem;
