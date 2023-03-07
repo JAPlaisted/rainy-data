@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Guy from "../Assets/umbrellaMan.png";
 import axios from "axios";
 import fileDownload from "js-file-download";
