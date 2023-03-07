@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HashLink } from 'react-router-hash-link';
 import Guy from "../Assets/umbrellaMan.png";
 import axios from "axios";
-import fileDownload from "js-file-download";
+import * as fileDownload from 'js-file-download';
 import $ from "jquery";
 
 function Home() {
@@ -14,29 +14,27 @@ function Home() {
 
   let fileLabel = !isActive ? "Files" : "Hide";
 
-  const download = (e) => {
-    e.preventDefault();
+  const download=(e)=>{
+    e.preventDefault()
     axios({
-      url: "http://localhost:3000",
-      method: "GET",
-      responseType: "blob",
-    }).then((res) => {
-      console.log(res);
-      fileDownload(res.data, "genreService.js");
-    });
-  };
+      url:"https://calm-figolla-4ac6c5.netlify.app/",
+      method:"GET",
+      responseType:"blob"
+    }).then((res)=>{
+      fileDownload(res.data, "fakeGenreService.js");
+    })
+  }
 
-  const download2 = (e) => {
-    e.preventDefault();
+  const download2=(e)=>{
+    e.preventDefault()
     axios({
-      url: "http://localhost:3000",
-      method: "GET",
-      responseType: "blob",
-    }).then((res2) => {
-      console.log(res2);
-      fileDownload(res2.data, "readingService.js");
-    });
-  };
+      url:"https://calm-figolla-4ac6c5.netlify.app/",
+      method:"GET",
+      responseType:"blob"
+    }).then((res2)=>{
+      fileDownload(res2.data, "fakeReadingService.js");
+    })
+  }
 
   const sectionStyle = {
     width: "100vw",
@@ -72,24 +70,6 @@ function Home() {
     $('.rain.front-row').append(drops);
     $('.rain.back-row').append(backDrops);
   }
-  
-  $('.splat-toggle.toggle').on('click', function() {
-    $('body').toggleClass('splat-toggle');
-    $('.splat-toggle.toggle').toggleClass('active');
-    makeItRain();
-  });
-  
-  $('.back-row-toggle.toggle').on('click', function() {
-    $('body').toggleClass('back-row-toggle');
-    $('.back-row-toggle.toggle').toggleClass('active');
-    makeItRain();
-  });
-  
-  $('.single-toggle.toggle').on('click', function() {
-    $('body').toggleClass('single-toggle');
-    $('.single-toggle.toggle').toggleClass('active');
-    makeItRain();
-  });
   
   makeItRain();
 }, []);
