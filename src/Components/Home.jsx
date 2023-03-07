@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Guy from "../Assets/umbrellaMan.png";
 import axios from "axios";
 import fileDownload from "js-file-download";
@@ -45,6 +45,8 @@ function Home() {
     backgroundPosition: "center",
     zIndex: "5",
   };
+
+  useEffect(() => {
   var makeItRain = function() {
     //clear out everything
     $('.rain').empty();
@@ -89,6 +91,7 @@ function Home() {
   });
   
   makeItRain();
+}, []);
 
   return (
     <section className="container" style={sectionStyle}>
