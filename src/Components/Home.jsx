@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { HashLink } from 'react-router-hash-link';
 import Guy from "../Assets/umbrellaMan.png";
 import axios from "axios";
 import fileDownload from "js-file-download";
@@ -105,9 +106,15 @@ function Home() {
           </li>
         </ul>
       </nav>
-      <div className="welcome-text centered">
+      <div className='file--container' style={{
+          display: isActive ? 'flex' : 'none',
+        }}>
+          <button className='file' onClick={(e)=>download(e)}>Film & Book Genres</button>
+          <button className='file' onClick={(e)=>download2(e)}>Reading List</button>
+        </div>
       <div className="rain front-row"></div>
       <div className="rain back-row"></div>
+      <div className="welcome-text centered"> 
         <h2 style={{ display: isActive ? "none" : "block" }}>About Us</h2>
         <p style={{ display: isActive ? "none" : "block" }}>
           Rainy Data is a web-based developer tool that allows developers to
@@ -115,17 +122,11 @@ function Home() {
           databases can be called upon in a function getDatabase() <br />
           <br />
           Got a question? Check out our{" "}
-          <a href="/faq" className="primary-text">
+          <HashLink to="/faq" className="primary-text">
             FAQ's
-          </a>
+          </HashLink>
         </p>
       </div>
-    <div className='file--container' style={{
-          display: isActive ? 'flex' : 'none',
-        }}>
-          <button className='file' onClick={(e)=>download(e)}>Film & Book Genres</button>
-          <button className='file' onClick={(e)=>download2(e)}>Reading List</button>
-        </div>
         <img
           className="guy"
           src={Guy}
