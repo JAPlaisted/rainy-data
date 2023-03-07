@@ -1,30 +1,40 @@
-## Rainy Data. 
+# Rainy Data
 
-I created this site to hopefully help fellow developers save time in creating test databases to test their applications during development. Made with React.js, express.js, cors, axios, file-downloader. This is a full stack application.
-
-## Visit Live Site
-
-https://calm-figolla-4ac6c5.netlify.app/
-
-## Project Screenshots
-![RainyData-1](https://user-images.githubusercontent.com/55415399/205342867-0032bca6-b160-45cc-a278-606a373b84d4.PNG)
-![RainyData-2](https://user-images.githubusercontent.com/55415399/205342879-76c570f0-23c8-41c5-83d5-eaef6afe56eb.PNG)
-![RainyData-FAQ](https://user-images.githubusercontent.com/55415399/205342891-85d090d3-759a-447b-a28f-d869d881b075.PNG)
+Rainy Data is a React and Express web resource for downloading mock JS databases for front-end application development, using Axios.
 
 ## Installation
 
-npm install
+To install Rainy Data, follow these steps:
 
-### To Run Test Suite
+Clone the repository to your local machine.
+Install the required dependencies using npm install.
+Start the development server using npm start.
 
-npm test
+## Usage
 
-### To Start Server
+View the live site here:
 
-npm start
+https://calm-figolla-4ac6c5.netlify.app/
 
-## Reflection
+OR
 
-This project features a download function for javascript files which required a small backend to work with file-downloader. This was the first time I have incorporated a hard coded back-end to a project and utilized Express.js.
+To use Rainy Data, follow these steps:
 
-This project is built with React and React-Router.
+Open your web browser and navigate to http://localhost:3000.
+
+## Contributing
+
+If you'd like to contribute to Rainy Data, please follow these guidelines:
+
+Fork the repository and create a new branch for your changes.
+Make your changes and test them thoroughly.
+Submit a pull request to the main repository and describe your changes in detail.
+
+## Screen Shots
+
+![chat1](https://user-images.githubusercontent.com/55415399/223567015-c9acdc44-cb7a-4eb0-ad0d-c3c06766a322.JPG)
+![chat2](https://user-images.githubusercontent.com/55415399/223567025-aec76580-337b-4d73-bf4d-1265fcb72be0.JPG)
+
+
+## Credits
+Rainy Data was created by Jonathan Plaisted.
